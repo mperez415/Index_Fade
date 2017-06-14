@@ -1,0 +1,15 @@
+{.section collection}
+
+  {.repeated section collections}
+
+    {.equal? typeName "page"}
+
+      <section id="{urlId}" class="index-page{.section mainImage} index-page--has-image{.or}{.background-source-video?} index-page--has-image{.end}{.end}" {.section mainImage} data-edit-main-image="Background">
+      </section>
+
+
+    {.end}
+
+  {.end}
+
+{.end}
