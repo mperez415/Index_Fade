@@ -18,11 +18,11 @@
         <squarespace:navigation navigationId="primary-nav" template="navigation" />
       </header>
 
-      <main id="page" class="site-page site-page--{collection.typeName}{.equal? collection.typeName "page"}{.or}-{.section item}item{.or}list{.end}{.end}" data-content-field="main-content">
+      <main id="page" class="site-page site-page--{collection.typeName}{.equal? collection.typeName "page"}{.or}-{.section item}item{.or}list{.end}{.end}" data-content-field="main-content" data-controller="{.equal? collection.typeName "index"}IndexPageLayout{.end}">
         {squarespace.main-content}
       </main>
 
-      <footer>
+      <footer id="footer" class="site-footer">
         <squarespace:block-field id="footer-blocks" columns="12" />
       </footer>
 

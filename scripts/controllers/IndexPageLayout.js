@@ -18,6 +18,7 @@ Velocity.RegisterEffect('show', {
   }, 1]]
 });
 
+// Heavily inspired by https://codyhouse.co/demo/page-scroll-effects/opacity.html
 function IndexPageLayout(element) {
   // DOM Elements
   let sectionsAvailable = Array.from(element.querySelectorAll('.index-page'));

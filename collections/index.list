@@ -4,12 +4,52 @@
 
     {.equal? typeName "page"}
 
-      <section id="{urlId}" class="index-page{.section mainImage} index-page--has-image{.or}{.background-source-video?} index-page--has-image{.end}{.end}" {.section mainImage} data-edit-main-image="Background">
-      </section>
+      <section id="{urlId}" class="index-page{.equal? @index 1} visible{.end}{.section mainImage} index-page--has-media{.or}{.background-source-video?} index-page--has-media{.end}{.end}"{.section mainImage} data-edit-main-image="Background"{.end}>
 
+        <div class="index-page-inner">
+
+          <div class="index-page-content-wrapper">
+            <div class="index-page-content{.section mainImage} sqs-alternate-block-style-container{.or}{.background-source-video?} sqs-alternate-block-style-container{.end}{.end}">
+              {mainContent}
+            </div>
+          </div>
+
+          {.background-source-video?}
+            <figure class="index-page-media content-fill">
+              {@|apply background-media.block}
+            </figure>
+          {.or}{.section mainImage}
+            <figure class="index-page-media content-fill">
+              {@|apply background-media.block}
+            </figure>
+          {.end}{.end}
+
+        </div>
+
+      </section>
 
     {.end}
 
   {.end}
+
+  <nav id="index-nav" class="site-page--index-list--navigation">
+    <ul>
+			<li>
+        <a href="#0" class="prev inactive">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+
+        </a>
+      </li>
+			<li>
+        <a href="#0" class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+        </svg>
+        </a>
+    </li>
+		</ul>
+  </nav>
 
 {.end}
